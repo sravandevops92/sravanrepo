@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Say Hello
-        run: echo "Hello from KK FUNDA WELCOME TO DEVOPS"
+        run: echo "Hello from KK FUNDA WELCOME TO sravan"
 
       - name: Show Linux version
         run: uname -a
