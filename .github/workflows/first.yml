@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Say Hello
-        run: echo "Hello from KK FUNDA"
+        run: echo "Hello from KK FUNDA WELCOME TO DEVOPS"
 
       - name: Show Linux version
         run: uname -a
