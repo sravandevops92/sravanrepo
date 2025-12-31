@@ -1,0 +1,23 @@
+name: Create GitHub Repository
+
+on:
+  workflow_dispatch:   # manual trigger
+
+jobs:
+  create-repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create repository using GitHub API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -X POST \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/user/repos \
+            -d '{
+              "name": "repo-created-by-github-actions",
+              "description": "This repo is created using GitHub Actions",
+              "private": false
+            }'
